@@ -19,7 +19,6 @@ body {
 }
 
 /* ==== Main Content ==== */
-
 .container {
     position: absolute;
     z-index: 1;
@@ -98,6 +97,76 @@ body {
     width: 60%;
 }
 
+.side-content {
+    grid-area: aside;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+}
+
+.side-content p {
+    transform: rotate(-90deg);
+    font-size: 32px;
+
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+
+    opacity: 0;
+
+    animation: 6s side-content-text 1.5s ease-in-out forwards;
+}
+
+.side-content img {
+    width: 100%;
+
+    grid-column: 2 / 6;
+    grid-row: 1 / 2;
+
+    animation: 6s side-content-img 0.5s ease-in-out;
+}
+
+.side-content div {
+    background: var(--primary-color);
+    height: 100%;
+    grid-column: 4 / 7;
+    grid-row: 1 / 2;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+
+    background: var(--primary-color);
+    border-radius: 0 60px 0 0;
+
+    animation: 6s footer-content 0.5s ease-in-out;
+}
+
+.footer-content div {
+    background: var(--tertiary-color);
+    width: 130px;
+    height: 50%;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-content div img {
+    width: 150px;
+    position: absolute;
+    bottom: 30px;
+
+    transform: translateY(15px) scale(1);
+    transition: transform 0.5s ease-in-out;
+}
+
+.footer-content div:hover img {
+    cursor: pointer;
+    transform: translateY(-15px) scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
 /* ==== Loader ==== */
 .loader {
     background: var(--primary-color);
@@ -109,7 +178,7 @@ body {
     position: absolute;
     z-index: 3;
 
-    animation: loader 0s linear forwards; /* forwards sirve para decir que la animación se quede en su estado final */
+    animation: loader 5s linear forwards; /* forwards sirve para decir que la animación se quede en su estado final */
 }
 
 .loader div {
@@ -179,5 +248,35 @@ body {
     }
     100% {
         transform: translateX(0px);
+    }
+}
+
+@keyframes side-content-text {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes side-content-img {
+    0% {
+        transform: translateX(500px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes footer-content {
+    0% {
+        transform: translateY(500px);
+    }
+    100% {
+        transform: translateY(0px);
     }
 }
