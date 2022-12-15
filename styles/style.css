@@ -1,4 +1,4 @@
-/* General */
+/* ==== General ==== */
 :root {
     --primary-color: #ffd602;
     --secundary-color: #d5040a;
@@ -18,7 +18,8 @@ body {
     width: 100%;
 }
 
-/* Main Content */
+/* ==== Main Content ==== */
+
 .container {
     position: absolute;
     z-index: 1;
@@ -39,6 +40,7 @@ body {
 .navbar {
     background: white;
     grid-area: nav;
+    display: flex;
 }
 
 .navbar__content {
@@ -68,7 +70,35 @@ body {
     font-weight: 300;
 }
 
-/* Loader */
+.main-content {
+    grid-area: section;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 80px;
+
+    animation: 6s main-content 0.5s ease-in-out;
+}
+
+.main-content p:first-child {
+    font-size: 36px;
+    font-weight: 300;
+    margin: 0 0 -14px 44px;
+}
+
+.main-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0 0 24px 0;
+}
+
+.main-content p:last-child {
+    font-weight: 300;
+    margin: 0;
+    width: 60%;
+}
+
+/* ==== Loader ==== */
 .loader {
     background: var(--primary-color);
     width: 100%;
@@ -79,7 +109,7 @@ body {
     position: absolute;
     z-index: 3;
 
-    animation: loader 5s linear forwards; /* forwards sirve para decir que la animación se quede en su estado final */
+    animation: loader 0s linear forwards; /* forwards sirve para decir que la animación se quede en su estado final */
 }
 
 .loader div {
@@ -106,7 +136,7 @@ body {
     animation-delay: 0.6s;
 }
 
-/* Animations */
+/* ==== Animations ==== */
 @keyframes loader {
     0% {
         opacity: 1;
@@ -140,5 +170,14 @@ body {
     }
     100% {
         transform: translateY(0px);
+    }
+}
+
+@keyframes main-content {
+    0% {
+        transform: translateX(-500px);
+    }
+    100% {
+        transform: translateX(0px);
     }
 }
