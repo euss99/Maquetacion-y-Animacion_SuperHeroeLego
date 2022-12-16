@@ -38,13 +38,13 @@
             </section>
 
             <section class="footer-content">
-                <div>
+                <div id="button1">
                     <img src="https://i.ibb.co/tKWqw8J/spiderman.png" alt="Imágen de Spiderman">
                 </div>
-                <div>
+                <div id="button2">
                     <img src="https://i.ibb.co/Xzsdvgg/robin.png" alt="Imágen de Robin">
                 </div>
-                <div>
+                <div id="button3">
                     <img src="https://i.ibb.co/M18p91c/batman.webp" alt="Imágen de Batman">
                 </div>
             </section>
@@ -58,9 +58,101 @@
         </section>
 
         <!-- Modal -->
-        <section>
+        <section class="modal">
+
+            <div class="modal1 inactive">
+                <div class="modal-container">
+                    <div class="modal-container__close1">
+                        <img src="https://img.icons8.com/ios/50/null/close-window--v1.png"/>
+                    </div>
+                    
+                    <div class="modal-container__slider">
+                        <input type="radio" name="slider-1" id="radio-1" checked>
+                        <input type="radio" name="slider-1" id="radio-2" >
+                        <input type="radio" name="slider-1" id="radio-3" >
+    
+                        <div class="modal-container__cards">
+                            <label for="radio-1" class="card-1 card1">
+                                <img src="./styles/images/spider-man-1.png" alt="Imágen Spiderman 1">
+                            </label>
+                            <label for="radio-2" class="card-1 card2">
+                                <img src="./styles/images/spider-man-2.png" alt="Imágen Spiderman 2">
+                            </label>
+                            <label for="radio-3" class="card-1 card3">
+                                <img src="./styles/images/spider-man-3.png" alt="Imágen Spiderman 3">
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div class="modal-container__button">
+                        <input type="button" value="Lo quiero!" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal2 inactive">
+                <div class="modal-container">
+                    <div class="modal-container__close2">
+                        <img src="https://img.icons8.com/ios/50/null/close-window--v1.png"/>
+                    </div>
+                    
+                    <div class="modal-container__slider">
+                        <input type="radio" name="slider-2" id="radio-1" checked>
+                        <input type="radio" name="slider-2" id="radio-2" >
+                        <input type="radio" name="slider-2" id="radio-3" >
+    
+                        <div class="modal-container__cards">
+                            <label for="radio-1" class="card-2 card1">
+                                <img src="./styles/images/robin-1.png" alt="Imágen Robin 1">
+                            </label>
+                            <label for="radio-2" class="card-2 card2">
+                                <img src="./styles/images/robin-2.png" alt="Imágen Robin 2">
+                            </label>
+                            <label for="radio-3" class="card-2 card3">
+                                <img src="./styles/images/robin-3.png" alt="Imágen Robin 3">
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div class="modal-container__button">
+                        <input type="button" value="Lo quiero!" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal3 inactive">
+                <div class="modal-container">
+                    <div class="modal-container__close3">
+                        <img src="https://img.icons8.com/ios/50/null/close-window--v1.png"/>
+                    </div>
+                    
+                    <div class="modal-container__slider">
+                        <input type="radio" name="slider-3" id="radio-1" checked>
+                        <input type="radio" name="slider-3" id="radio-2" >
+                        <input type="radio" name="slider-3" id="radio-3" >
+    
+                        <div class="modal-container__cards">
+                            <label for="radio-1" class="card-3 card1">
+                                <img src="./styles/images//batman-1.png" alt="Imágen batman 1">
+                            </label>
+                            <label for="radio-2" class="card-3 card2">
+                                <img src="./styles/images/batman-2.png" alt="Imágen batman 2">
+                            </label>
+                            <label for="radio-3" class="card-3 card3">
+                                <img src="./styles/images/batman-3.png" alt="Imágen batman 3">
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div class="modal-container__button">
+                        <input type="button" value="Lo quiero!" />
+                    </div>
+                </div>
+            </div>
 
         </section>
     </div>
+
+    <script src="./src/main.js"></script>
 </body>
 </html>
